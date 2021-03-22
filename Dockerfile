@@ -7,8 +7,8 @@ RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
 RUN apt-get install -y nodejs
 RUN npm i -g npm
 RUN cd / && \
-    git clone https://github.com/suprojects/CallsMusic smp && \
-    apt-get install mpv libmpv-dev pulseaudio -y \
+    apt-get install mpv libmpv-dev pulseaudio -y && \
+    git clone https://github.com/suprojects/vcpb smp && \
     cd smp/ && \
     rm -r .git && \
     pip3 install -r requirements.txt
